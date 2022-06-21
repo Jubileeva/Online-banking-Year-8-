@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --green:#00E77F;
+    --deep-green:#139268;
+    --white:#fff;
+    --light-white:#3d3d3d;
+    --black:#3d3d3d;
+    --light-bg:#4b4b4b;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+/*Background*/
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -1;
+}
+/*Registration form*/
+.container{
+    max-width: 700px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+    text-align: center;
+    padding: 0 0 20px 0;
+}
+.container .title:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(135deg, #0b0d0f, var(--green));
+}
+.container form .user{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+form .user .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 24px);
+}
+.user .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user .input-box .info{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+/*Payment cards*/
+
+.pay{
+    max-width: 700px;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 30px;
+    border-radius: 25px;
+}
+.pay .input-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px -30px;
+}
+.pay .input-box span{
+    font-size: 18px;
+    margin-top: 10px;
+    display: inline-block;
+}
+h3{
+    font-size: 21px;
+    color:#333;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: -20px;
+    letter-spacing: 2px;
+}
+
+/*Gender choices*/
+form .gender-form .gender-title{
+    font-size: 20px;
+    font-weight: 500;
+}
+form .gender-form .choice{
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+.gender-form .choice label{
+    display: flex;
+    align-items: center;
+}
+.gender-form .choice .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+}
+#dot-1:checked ~ .choice label .one,
+#dot-2:checked ~ .choice label .two,
+#dot-3:checked ~ .choice label .three{
+    background: #32be8f;
+}
+form input[type="radio"]{
+    display: none;
+}
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    background: linear-gradient(135deg, var(--deep-green), var(--green));
+}
+form .button input:hover{
+    background: linear-gradient(-135deg, var(--deep-green), var(--green));
+}

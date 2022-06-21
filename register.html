@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="shortcut icon" href="images/logo.png">
+</head>
+<body>
+    <!--background-->
+    <img src="img2/wave-11.svg" class="wave">
+
+    <!--Registration-->
+    <div class="container">
+        <div class="title">Registration</div>
+        <!--form-->
+        <form action="#">
+            <div class="user">
+                <div class="input-box">
+                    <span class="info">Full Name</span>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="info">Postcode</span>
+                    <input type="number" placeholder="Enter your postcode"  max="9999999999" min="0" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="info">Email</span>
+                    <input type="text" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="info">Phone Number</span>
+                    <input type="number" placeholder="Enter your number"  max="9999999999" min="0" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="info">Password</span>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="input-box">
+                    <span class="info">Confirm Password</span>
+                    <input type="password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+
+            <!--Payment cards-->
+            <h3>payment</h3>
+            <div class="pay">
+                    <div class="input-box">
+                        <span>Registered cards accepted :</span>
+                        <img src="images/card.png">
+                    </div>
+            </div>
+
+            <!--Gender-->
+            <div class="gender-form">
+                <input type="radio" name="gender" id="dot-1">
+                <input type="radio" name="gender" id="dot-2">
+                <input type="radio" name="gender" id="dot-3">
+                <span class="gender-title">Gender</span>
+                <div class="choice">
+                    <label for="dot-1">
+                        <span class="dot one"></span>
+                        <span class="gender">Male</span>
+                    </label>
+
+                    <label for="dot-2">
+                        <span class="dot two"></span>
+                        <span class="gender">Female</span>
+                    </label>
+
+                    <label for="dot-3">
+                        <span class="dot three"></span>
+                        <span class="gender">Private</span>
+                    </label>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="Register">
+            </div>
+        </form>
+    </div>
+
+    <!--Registration ends-->
+</body>
+</html>
