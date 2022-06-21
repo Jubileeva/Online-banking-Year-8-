@@ -1,0 +1,714 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+:root{
+    --green:#00E77F;
+    --white:#fff;
+    --light-white:#3d3d3d;
+    --black:#3d3d3d;
+    --light-bg:#4b4b4b;
+    --deep-green:#32be8f;
+}
+*::selection{
+    background-color: var(--white);
+    color: var(--black);
+}
+body{
+    background-color: var(--white);
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+}
+section{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/*Services and Reviews adjustment*/
+.card-body, .reviews{
+    max-width: 100%;
+    padding: 2rem;
+    margin: 10% auto;
+}
+
+/*Universal button style*/
+.btn{
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 5rem;
+    background-color: var(--light-bg);
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    transition: .3s;
+}
+.btn:hover{
+    background-color: var(--green);
+    transform: scale(1.05);
+}
+
+/*Header section starts*/
+
+.header{
+    width: 100%;/* height: 110px; *//* background-color: rgb(244, 220, 245); */
+}
+.first-nav{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;/* padding: 10px 0px; */
+    font-family: 'Mukta', sans-serif;/* border: 1px solid rgb(157, 64, 64); */
+    position: relative;
+    z-index: 1001;
+    background: var(--white);
+}
+.header .first-nav img{
+    margin: -4px 0px 0px 50px;
+    width: 120px;
+    height: 130px; /*100px*/
+}
+.bg{
+    display: block;
+    padding-left: 40px;/* border: 1px solid rgb(53, 209, 110); */
+    width: 380px;
+}
+ .bg-btn{
+    margin-bottom: 10px;
+    padding-left: 24px;
+    /*border: 1px solid rgb(93, 43, 43);*/
+}
+ .bg-btn button{
+    margin: 2px 15px;
+    width: 120px; /*115px*/
+    height: 35px;
+    /* border: 1px solid blueviolet; */
+    border: none;
+    font-weight: 20;
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 19px;
+    transition: 0.3s;
+    background: var(--deep-green); /*rgb(129, 124, 124);*/
+}
+
+.bg-btn button:hover{
+    background-color: var(--black);
+    border: none;
+    border-radius: 20px;
+    opacity: 0.85;
+    padding: 1.5px;
+    box-shadow: 0px 0px 17px -2px rgba(48, 43, 45, 0.699);
+    height: 38px;
+    font-size: 20px;
+}
+.bg-btn button a{
+    color: var(--white);
+}
+.bg .nav-home{
+    text-align: center;
+    width: 230px;
+    height: 39px; /*39*/
+    border: 2px solid var(--deep-green);
+    margin-left: 59px;
+    font-size: 20px;
+    border-radius: 3px;
+    font-weight: 550;
+}
+.bg .nav-home .home-bx{
+    text-decoration: none;
+    /*color: blueviolet;*/
+    color: var(--deep-green);
+    margin-top: 4px;
+    display: block;
+}
+.dropdown{
+    display: none;
+}
+.nav-home:hover .dropdown{
+    display: block;
+    width: 230px;
+    margin-left: -2px;
+    opacity: 0.93;
+}
+.nav-home:hover .dropdown ul{
+    list-style: none;
+    margin-top: 3px;
+}
+
+.nav-home:hover .dropdown ul li{
+    padding: 5px 0px;
+    border: 1px solid var(--deep-green); /*blueviolet*/
+    text-align: center;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.dropdown ul li:hover{
+    width: 240px;
+}
+.dropdown ul li a{
+    padding: 0px 30px;
+    border-radius: 20px;
+    color: var(--deep-green);
+}
+.dropdown ul li a:hover{
+    background-color: rgb(221, 219, 219);/* opacity: 0.5; */
+}
+
+/*Second bar */
+.nav-bar{
+    background: var(--light-bg);
+    left: 0;
+    right: 0;
+    /*position: fixed;*/
+    border-top: 1px solid var(--white);
+    border-bottom: 1px solid var(--white);
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    z-index: 999;
+}
+.nav-bar ul{
+    list-style: none;
+    display: inline-flex;
+}
+.nav-bar ul li{
+    width: 200px;
+    padding: 12px;
+    margin: 15px;
+}
+.nav-bar ul li a{
+    text-decoration: none;
+    color: var(--green);
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.always, .nav-bar ul li:hover{
+    background-color: var(--black);
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 24px;
+    font-weight: 550;
+}
+.nav-bar i{
+    margin-right: 8px;
+}
+.sub{
+    display: none;
+}
+.nav-bar ul li:hover .sub{
+    display: block;
+    position: absolute;
+    background-color: var(--black);
+    margin-top: 10px;
+    margin-left: -12px;
+    opacity: 0.9;
+    border-radius: 5px;
+}
+.nav-bar ul li:hover .sub ul{
+    display: block;
+    margin: 15px;
+}
+.nav-bar ul li:hover .sub ul li{
+    width: 140px;
+    padding: 10px;
+    border-top: 2px solid var(--light-bg);
+    text-align: center;
+    font-weight: 100;
+}
+.sub ul li a:hover{
+    color: var(--white);
+}
+.wave{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	z-index: -2;
+}
+/*header section ends*/
+
+/*Home sections starts*/
+.home{
+    width: 100%;
+    background: var(--white);
+    justify-content: center;
+    align-items: center;
+}
+.home .img{
+    width: 40%;
+    margin: 0 auto;
+}
+.home .img img{
+    width: 100%;
+    height: 30%;
+}
+/*Home sections ends*/
+
+/*Counter section starts*/
+
+.count .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+    
+}
+.count .box-container .box{
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+.count .box-container .box i{
+    font-size: 5rem;
+    color: var(--green);
+}
+.count .box-container .box .content h3{
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: .5rem;
+    text-transform: none;
+}
+.count .box-container .box .content p{
+    font-size: 1.6rem;
+    color: var(--green);
+}
+
+/*Counter section ends*/
+
+/*About section starts*/
+.about{
+    width: 100%;
+    height: 450px; /*400px*/
+    margin: 0 30px 0 0;
+    background: linear-gradient(rgba(56, 57, 56, 0.75), rgba(57, 56, 56, 0.75)),transparent;
+    /*background: transparent;*/
+    /*margin-top: 20px; /*omit if you use color*/
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+.about .row .image{
+    flex: 2.5 1 23rem; 
+    height: 380px;
+    margin-left: 40px;
+    border-radius: 20px;
+    /*border: 2px solid red;*/
+}
+.about .row .image img{
+    width: 100%;
+    height: 100%;
+}
+.about .row .content{
+    text-align: center;
+    flex: 2 1 40rem;
+}
+.about .row .content h1{
+    font-size: 3rem;
+    color: var(--green);
+    margin-bottom: 15px;
+}
+.about .row .content h1 .underline{
+    width: 14%; /*10%*/
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: relative; /*static*/
+    top: 10px;
+    left: 43%; /*45%*/
+}
+.about .row .content h1 .underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    animation: moving 2s linear infinite;
+    overflow: hidden;
+}
+@keyframes moving{
+    0%{
+        right: -20px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+.about .row .content p{
+    padding: 1rem 0;
+    line-height: 2;
+    font-weight: 500;
+    font-size: 1.7rem;
+    color: var(--white); /*#555 if no bg color*/
+    text-transform: none;
+    word-spacing: .1rem;
+}
+.about .content .btn{
+    float: none;
+    margin-top: 10px;
+}
+
+/*About section ends*/
+
+/*Cards section starts*/
+
+.heading{
+    margin-bottom: 4.5rem;
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+}
+.heading span{
+    color: var(--green);
+}
+.heading .underline{
+    width: 14%; /*10%*/
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: relative; /*static*/
+    top: 10px;
+    left: 43%; /*45%*/
+}
+.heading .underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    animation: moving 2s linear infinite;
+    overflow: hidden;
+}
+@keyframes moving{
+    0%{
+        right: -20px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+.card-body .flex{
+    display: flex;
+}
+.card-body .card{
+    width: 32rem; /*30rem*/
+    background: linear-gradient(rgba(56, 57, 56, 0.75), rgba(57, 56, 56, 0.75)) transparent;
+    border-radius: 5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    /*height: 90vh;*/
+}
+.card-body .card img{
+    height: 25rem;
+    width: 100%;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
+}
+.card-body .card h3{
+    margin: 1.5rem 0;
+    font-size: 2.2rem;
+    color: var(--white);
+}
+.card-body .card p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--white);
+    text-transform: none;    
+    padding: 0 3rem;
+}
+#card-btn{
+    background-color: var(--green);
+    margin: 20px 0;
+    color: var(--white);
+}
+#card-btn:hover{
+    background-color: var(--light-white);
+}
+.card-body .card .share{
+    position: absolute;
+    top: 1rem;
+    left: -10rem;
+}
+.card-body .card:hover .share{
+    left: 2rem;
+}
+.card-body .card .share a{
+    display: block;
+    margin-top: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
+    line-height: 4.5rem;
+    border-radius: .5rem;
+    background-color: var(--white);
+    color: var(--black);
+    text-align: center;
+    font-size: 2rem;
+}
+.card-body .card .share a:hover{
+    background-color: var(--green);
+    color: var(--white);
+}
+/*Cards section ends*/
+
+/*reviews section starts*/
+
+.reviews .flex{
+    display: flex;
+}
+.reviews .card{
+    width: 35rem;
+    border-radius: .5rem;
+    background: linear-gradient(rgba(114, 112, 112, 0.75), rgba(114, 112, 112, 0.75)),transparent;
+    box-shadow: rgba(0,0,0,0.3);
+    padding: 2rem;
+    margin-bottom: 4rem;
+    user-select: none;
+    text-align: center;
+    margin-bottom: 4rem;
+    margin: auto;
+}
+.reviews .card p{
+    line-height: 2;
+    font-size: 1.6rem;
+    color: var(--white);
+    text-transform: none;
+}
+.reviews .card .user{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.reviews .card .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+/*Andrew and Victoria text align*/
+.reviews .card .user h3{
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: .7rem;
+    margin-left: -1.8rem;
+}
+/*Kevin*/
+.reviews .card .user .kevin{
+    font-size: 2rem;
+    color: var(--white);
+    margin-bottom: .7rem;
+    margin-left: -4rem;
+}
+.reviews .card .user .stars i{
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+/*reviews section ends*/
+
+/*Coupon section starts*/
+
+.coupon{
+    background: var(--black);
+    opacity: 0.9;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    background-attachment: fixed;
+    text-align-last: center;
+}
+.coupon .content span{
+    font-size: 2rem;
+    color: var(--green);
+}
+.coupon .content h1{
+    font-size: 4rem;
+    color: orange;
+    margin-top: 1rem;
+}
+.coupon .content p{
+    max-width: 60rem;
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    color: var(--white);
+    line-height: 2;
+    text-transform: none;
+}
+
+/*Coupon section ends*/
+
+/*Footer section starts*/
+
+.footer{
+    width: 100%;
+    position: relative;
+    background-color: var(--light-white);
+    color: #fff;
+    bottom: 0;
+    padding: 50px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: sans-serif;
+}
+.footer .row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.row .col{
+    flex-basis: 25%;
+    padding: 10px;
+}
+.row .col:nth-child(2), .col:nth-child(3){
+    flex-basis: 15%;
+}
+.row .col .logo{
+    width: 80px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+}
+.row .col h3{
+    width: fit-content; /*If u write 4 letters, width is account for 4 letters*/
+    margin-bottom: 40px;
+    position: relative;
+}
+.row .col p{
+    text-transform: none;
+    word-spacing: .2rem;
+}
+.row .col .email-id{
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
+}
+.row .col a{
+    text-decoration: none;
+    color: #fff;
+    margin: 20px 0;
+    display: flex;
+}
+.row .col form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+}
+.row .col form .email{
+    font-size: 18px;
+    margin-right: 10px;
+}
+.row .col form input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: none;
+}
+.row .col form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+.row .col form button .arrow{
+    font: 16px;
+    color: #ccc;
+}
+.row .col .social-media{
+    display: flex;
+    margin-top: -5rem;
+}
+.row .col .social-media .social-icon {
+    display: flex;
+    height: 46px;
+    width: 46px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    color: #333;
+    border-radius: 50%;
+    border: 1px solid #333;
+    text-decoration: none;
+    font-size: 2rem;
+    transition: 0.3s;
+    background: var(--white);
+}
+.row .col .social-icon i{
+      color: var(--black);
+}
+.row .col .social-media .social-icon:hover{
+      background: var(--green);
+}
+.row .col .social-media .social-icon:hover i{
+      color: var(--white);
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copyright{
+    text-align: center;
+}
+.underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+.underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    animation: moving 2s linear infinite;
+    overflow: hidden;
+}
+@keyframes moving{
+    0%{
+        right: -20px;
+    }
+    100%{
+        right: 100%;
+    }
+}
+
+  
